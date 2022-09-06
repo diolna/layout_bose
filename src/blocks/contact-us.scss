@@ -1,0 +1,39 @@
+.contact {
+
+  &__field {
+    margin: 0 0 16px;
+
+    &--last {
+      margin-bottom: 32px;
+     }
+
+     &--button {
+      margin-bottom: 36px;
+     }
+  }
+
+  &__info{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  &__info-name {
+    margin: 0 0 24px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__info-link {
+    margin: 0 0 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #9FADC2;
+
+    &:last-child {
+      margin: 0;
+      color: #3E3E3E;
+    }
+  }
+}

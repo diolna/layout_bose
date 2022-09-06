@@ -1,0 +1,62 @@
+.recomended {
+
+  &__photo {
+    justify-content: center;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 32px;
+
+    transition: transform $animation-speed;
+
+    @include onTablet {
+      width: 392px;
+    }
+
+    @include onDesktop {
+      width: 324px;
+    }
+
+    &:hover {
+      transform: scale(110%, 110%);
+    }
+  }
+
+  &__description {
+
+    &--name, &--price {
+      margin-bottom: 8px;
+    }
+
+    &--type {
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+    @include onDesktop {
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

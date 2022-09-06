@@ -1,0 +1,45 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #F8F8FA;
+  width: 100%;
+
+  box-sizing: border-box;
+  border-radius: 40px;
+  border: 1px solid #F8F8FA;
+  height: 48px;
+  padding: 14px 16px;
+
+  &::placeholder {
+    color: #7E7E83;
+  }
+
+  &:hover{
+    border: 1px solid #D5D7DE;
+
+    &::placeholder {
+      color: $color-black;
+    }
+  }
+
+  &:active {
+    border: 1px solid $color-black;
+
+    //&::placeholder {
+    //  color: $color-black;
+    //}
+  }
+
+  &--textarea {
+    font-family: Inter, sans-serif;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    padding: 14px 16px;
+    resize: none;
+    height: 148px;
+ }
+}

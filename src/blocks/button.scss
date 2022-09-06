@@ -1,0 +1,35 @@
+.button {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+
+  height: 56px;
+  width: 100%;
+
+  background: $color-black;
+  border-radius: 40px;
+  border: 2px solid $color-black;
+  color: #fff;
+
+  &--primary {
+    background-color: #E5E5E5;
+    color: $color-black;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $color-black;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: #111111;
+    color: #fff;
+    outline: none;
+  }
+}

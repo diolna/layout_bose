@@ -1,0 +1,70 @@
+.header {
+  background-image: url(../images/header_320px.png);
+  @include image-properties;
+  background-size: cover;
+
+  @include onTablet {
+    background-image: url(../images/header_744px.png);
+  }
+  @include onDesktop {
+    background-image: url(../images/header_1260px.png);
+  }
+
+  &__content {
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+     padding: 40px 0 94px;
+
+    @include onTablet {
+      padding: 52px 0 40px;
+    }
+
+    @include onDesktop {
+      padding: 52px 0 64px;
+    }
+  }
+
+  &__top {
+    @include top-header;
+  }
+
+  &__title {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: left;
+
+    @include onTablet {
+      font-size: 40px;
+    }
+
+    @include onDesktop {
+      font-size: 48px;
+    }
+
+    &::before {
+      content: "";
+      background-image: url(../images/wave.png);
+      @include image-properties;
+      background-size: cover;
+      width: 32px;
+      height: 27px;
+      display: block;
+
+      margin-bottom: 16px;
+
+      @include onTablet {
+        width: 64px;
+        height: 76px;
+        margin-bottom: 40px;
+        background-image: url(../images/wave_744px.png);
+      }
+    }
+  }
+}

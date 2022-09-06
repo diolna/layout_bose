@@ -1,0 +1,53 @@
+.icon {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  @include image-properties;
+  background-size: contain;
+
+  text-decoration: none;
+
+  &__tooltip {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 12px;
+
+    display: block;
+    width: max-content;
+
+    color: $color-black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $animation-speed;
+  }
+
+  &:hover &__tooltip {
+    @include onDesktop {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &--phone {
+        background-image: url(../images/icon_phone.png);
+  }
+
+  &--menu {
+    background-image: url(../images/icon_menu.png);
+
+    &:hover {
+      background-image: url(../images/icon_menu_hover.png);
+
+      @include onDesktop {
+        background-image: url(../images/icon_menu_hover_desktop.png);
+      }
+    }
+  }
+
+  &--close {
+    background-image: url(../images/close.png);
+  }
+}
