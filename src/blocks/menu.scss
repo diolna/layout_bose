@@ -1,0 +1,68 @@
+.menu {
+  background-color: #E5E5E5;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  &__top {
+    @include top-menu;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 40px 0 94px ;
+
+    @include onTablet {
+      padding: 52px 0 40px;
+    }
+
+    @include onDesktop {
+      padding: 52px 0 64px;
+    }
+  }
+
+  &__list {
+    margin: 0 0 40px;
+    padding: 0;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &__item {
+   margin-bottom: 32px;
+
+   &:last-child {
+    margin-bottom: 0;
+   }
+  }
+
+  &__call {
+    display:  block;
+    width: max-content;
+    text-decoration: none;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: $color-black;
+
+    &--phone {
+      margin-bottom: 16px;
+    }
+
+    &--order {
+      font-size: 12px;
+      line-height: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $color-black;
+    }
+  }
+}

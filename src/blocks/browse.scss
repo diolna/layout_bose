@@ -1,0 +1,48 @@
+.browse {
+  font-size: 24px;
+  line-height: 140%;
+
+  &__container {
+    margin-bottom: 16px;
+  }
+
+  &__place {
+    margin-bottom: 64px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;  //% of width
+    max-height:  320px;
+
+    transition: transform $animation-speed;
+
+    &:hover {
+      transform: scale(110%, 110%);
+      z-index: 1;
+    }
+
+    @include onDesktop {
+      height: 320px;
+      padding-bottom: 0;
+    }
+
+    @include onTablet {
+      height: 187px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
